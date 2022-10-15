@@ -3,6 +3,7 @@ package com.example.pushinglocalnotifications.NotificationChannel
 import android.app.Application
 import android.app.NotificationChannel
 import android.app.NotificationManager
+import android.content.Context
 import android.os.Build
 
 class MyApp : Application() {
@@ -19,6 +20,10 @@ class MyApp : Application() {
                 "counter",
                 NotificationManager.IMPORTANCE_DEFAULT
             )
+            channel.description = "use for the increment counter notifictions"
+            val Notificatinmanager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            Notificatinmanager.createNotificationChannel(channel)
 
         }
     }
