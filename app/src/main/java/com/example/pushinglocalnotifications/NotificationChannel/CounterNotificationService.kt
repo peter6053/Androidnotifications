@@ -10,8 +10,7 @@ import com.example.pushinglocalnotifications.MainActivity
 import com.example.pushinglocalnotifications.R
 
 class CounterNotificationService(private val context: Context) {
-    private val notificationManager =
-        context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+    private val notificationManager = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
     fun shownotification(Counter: Int) {
         val activityintent = Intent(context, MainActivity::class.java)
